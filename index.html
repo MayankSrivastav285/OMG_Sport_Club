@@ -435,12 +435,53 @@
     }
 
     /* UPCOMING */
+    .date-group {
+      margin-top: 48px
+    }
+
+    .date-group-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px
+    }
+
+    .date-group-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 1px;
+      color: var(--text)
+    }
+
+    .date-group-count {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--orange);
+      background: rgba(255, 107, 53, 0.1);
+      padding: 4px 10px;
+      text-transform: uppercase
+    }
+
     .upcoming-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 1px;
-      background: var(--border);
-      margin-top: 56px
+      background: var(--border)
+    }
+
+    .upcoming-grid.count-1 {
+      grid-template-columns: 1fr
+    }
+
+    .upcoming-grid.count-1 .upcoming-card {
+      max-width: 640px
+    }
+
+    @media(min-width:769px) {
+      .upcoming-grid.count-2 {
+        grid-template-columns: repeat(2, 1fr)
+      }
     }
 
     .upcoming-card {
@@ -884,11 +925,9 @@
     <p class="hero-sub">Find local sports sessions, meet amazing people, and enjoy the game - Ek aur game ho jaaye?</p>
     <div class="hero-btns">
       <a href="https://chat.whatsapp.com/EqLcn2xRznv3rLMVpGH84R" class="btn-primary">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
           <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-          <path
-            d="M12 0C5.373 0 0 5.373 0 12c0 2.136.565 4.14 1.545 5.872L.057 23.886a.5.5 0 00.611.613l6.088-1.52A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 01-5.012-1.376l-.36-.214-3.726.93.975-3.638-.235-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+            d="M16.004 2.667c-7.36 0-13.333 5.973-13.333 13.333 0 2.351.615 4.646 1.782 6.667L2.667 29.333l6.822-1.79a13.27 13.27 0 006.515 1.717h.006c7.36 0 13.333-5.972 13.333-13.333 0-3.56-1.387-6.907-3.905-9.425a13.244 13.244 0 00-9.434-3.902zm0 24.4a11.05 11.05 0 01-5.635-1.542l-.404-.24-4.049 1.062 1.081-3.947-.264-.405a11.04 11.04 0 01-1.696-5.895c0-6.116 4.977-11.093 11.096-11.093a11.02 11.02 0 017.844 3.25 11.02 11.02 0 013.244 7.849c0 6.117-4.977 11.093-11.097 11.093l-.12-.132zm6.086-8.303c-.334-.167-1.973-.973-2.279-1.084-.306-.111-.528-.167-.751.167s-.862 1.084-1.057 1.307c-.194.222-.389.25-.723.083-.334-.167-1.409-.519-2.685-1.657-.992-.885-1.663-1.978-1.858-2.312-.194-.334-.02-.514.146-.68.15-.15.334-.39.5-.585.167-.195.223-.334.334-.556.111-.223.056-.417-.028-.584-.083-.167-.751-1.81-1.029-2.479-.271-.65-.546-.562-.751-.573-.194-.01-.417-.012-.64-.012s-.584.083-.89.417c-.306.334-1.168 1.14-1.168 2.782s1.196 3.229 1.363 3.451c.167.223 2.354 3.593 5.703 5.038.797.344 1.418.55 1.902.703.799.254 1.527.218 2.102.132.641-.096 1.973-.807 2.251-1.586.278-.779.278-1.446.194-1.586-.083-.14-.306-.223-.64-.39z" />
         </svg>
         Join WhatsApp
       </a>
@@ -963,11 +1002,9 @@
             View Location
           </a>
           <a href="https://chat.whatsapp.com/EqLcn2xRznv3rLMVpGH84R" class="btn-outline">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor">
               <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 2.136.565 4.14 1.545 5.872L.057 23.886a.5.5 0 00.611.613l6.088-1.52A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 01-5.012-1.376l-.36-.214-3.726.93.975-3.638-.235-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+                d="M16.004 2.667c-7.36 0-13.333 5.973-13.333 13.333 0 2.351.615 4.646 1.782 6.667L2.667 29.333l6.822-1.79a13.27 13.27 0 006.515 1.717h.006c7.36 0 13.333-5.972 13.333-13.333 0-3.56-1.387-6.907-3.905-9.425a13.244 13.244 0 00-9.434-3.902zm0 24.4a11.05 11.05 0 01-5.635-1.542l-.404-.24-4.049 1.062 1.081-3.947-.264-.405a11.04 11.04 0 01-1.696-5.895c0-6.116 4.977-11.093 11.096-11.093a11.02 11.02 0 017.844 3.25 11.02 11.02 0 013.244 7.849c0 6.117-4.977 11.093-11.097 11.093l-.12-.132zm6.086-8.303c-.334-.167-1.973-.973-2.279-1.084-.306-.111-.528-.167-.751.167s-.862 1.084-1.057 1.307c-.194.222-.389.25-.723.083-.334-.167-1.409-.519-2.685-1.657-.992-.885-1.663-1.978-1.858-2.312-.194-.334-.02-.514.146-.68.15-.15.334-.39.5-.585.167-.195.223-.334.334-.556.111-.223.056-.417-.028-.584-.083-.167-.751-1.81-1.029-2.479-.271-.65-.546-.562-.751-.573-.194-.01-.417-.012-.64-.012s-.584.083-.89.417c-.306.334-1.168 1.14-1.168 2.782s1.196 3.229 1.363 3.451c.167.223 2.354 3.593 5.703 5.038.797.344 1.418.55 1.902.703.799.254 1.527.218 2.102.132.641-.096 1.973-.807 2.251-1.586.278-.779.278-1.446.194-1.586-.083-.14-.306-.223-.64-.39z" />
             </svg>
             Join WhatsApp
           </a>
@@ -988,7 +1025,7 @@
       <p class="section-sub fade-up" style="margin-bottom:8px">We run sessions multiple times a week across Delhi. Pick
         your game, show up, play.</p>
     </div>
-    <div class="upcoming-grid fade-up" id="upcoming-grid"></div>
+    <div id="upcoming-container"></div>
   </section>
 
   <div class="divider"></div>
@@ -1072,11 +1109,9 @@
     <h2 class="footer-cta-title fade-up">READY<br>TO <span>PLAY?</span></h2>
     <div class="footer-btns fade-up">
       <a href="https://chat.whatsapp.com/EqLcn2xRznv3rLMVpGH84R" class="btn-white">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
           <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-          <path
-            d="M12 0C5.373 0 0 5.373 0 12c0 2.136.565 4.14 1.545 5.872L.057 23.886a.5.5 0 00.611.613l6.088-1.52A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 01-5.012-1.376l-.36-.214-3.726.93.975-3.638-.235-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+            d="M16.004 2.667c-7.36 0-13.333 5.973-13.333 13.333 0 2.351.615 4.646 1.782 6.667L2.667 29.333l6.822-1.79a13.27 13.27 0 006.515 1.717h.006c7.36 0 13.333-5.972 13.333-13.333 0-3.56-1.387-6.907-3.905-9.425a13.244 13.244 0 00-9.434-3.902zm0 24.4a11.05 11.05 0 01-5.635-1.542l-.404-.24-4.049 1.062 1.081-3.947-.264-.405a11.04 11.04 0 01-1.696-5.895c0-6.116 4.977-11.093 11.096-11.093a11.02 11.02 0 017.844 3.25 11.02 11.02 0 013.244 7.849c0 6.117-4.977 11.093-11.097 11.093l-.12-.132zm6.086-8.303c-.334-.167-1.973-.973-2.279-1.084-.306-.111-.528-.167-.751.167s-.862 1.084-1.057 1.307c-.194.222-.389.25-.723.083-.334-.167-1.409-.519-2.685-1.657-.992-.885-1.663-1.978-1.858-2.312-.194-.334-.02-.514.146-.68.15-.15.334-.39.5-.585.167-.195.223-.334.334-.556.111-.223.056-.417-.028-.584-.083-.167-.751-1.81-1.029-2.479-.271-.65-.546-.562-.751-.573-.194-.01-.417-.012-.64-.012s-.584.083-.89.417c-.306.334-1.168 1.14-1.168 2.782s1.196 3.229 1.363 3.451c.167.223 2.354 3.593 5.703 5.038.797.344 1.418.55 1.902.703.799.254 1.527.218 2.102.132.641-.096 1.973-.807 2.251-1.586.278-.779.278-1.446.194-1.586-.083-.14-.306-.223-.64-.39z" />
         </svg>
         Join WhatsApp
       </a>
@@ -1106,37 +1141,106 @@
   </footer>
 
   <script>
-    const todaySession = { sport: "Badminton", location: "Smash Arena", area: "East Delhi", date: "2 July", day: "Thursday", time: "9:00 PM – 10:00 PM", price: "₹150", mapsLink: "https://www.google.com/maps/place/Smashing+Arena/@28.6777274,77.3153034,59m/data=!3m1!1e3!4m6!3m5!1s0x390cfbe1262cabe5:0xe65adac50b430ef2!8m2!3d28.677705!4d77.3153793!16s%2Fg%2F11vxcd8ssq?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" };
+    // =========================================================
+    // 1. LOCATIONS — single source of truth.
+    //    Update a location HERE and it updates everywhere it's
+    //    referenced (today card + every upcoming session card).
+    // =========================================================
+    const LOCATIONS = {
+      "east-delhi": {
+        name: "Smashing Arena",
+        area: "East Delhi",
+        mapsLink: "https://www.google.com/maps/place/Smashing+Arena/@28.6777274,77.3153034,59m/data=!3m1!1e3!4m6!3m5!1s0x390cfbe1262cabe5:0xe65adac50b430ef2!8m2!3d28.677705!4d77.3153793!16s%2Fg%2F11vxcd8ssq?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "pritampura": {
+        name: "Pritampura Sports Complex",
+        area: "Pritampura",
+        mapsLink: "" // add a Google Maps link here whenever you have one
+      }
+      // add more locations here, e.g.
+      // "dwarka": { name: "Dwarka Sports Arena", area: "Dwarka", mapsLink: "https://..." }
+    };
 
+    // =========================================================
+    // 2. TODAY'S SESSION — references a locationId from LOCATIONS
+    // =========================================================
+    const todaySession = {
+      sport: "Badminton",
+      locationId: "east-delhi",
+      date: "2 July",
+      day: "Thursday",
+      time: "9:00 PM – 10:00 PM",
+      price: "₹150"
+    };
+
+    // =========================================================
+    // 3. UPCOMING SESSIONS — just add more objects to this array.
+    //    Multiple sessions on the same date are supported out of
+    //    the box: they'll be grouped and shown together under one
+    //    date heading. locationId pulls from LOCATIONS above.
+    // =========================================================
     const upcomingSessions = [
-      
-      { sport: "Badminton", area: "East Delhi", date: "3 July", day: "Friday", time: "9:00 PM – 10:00 PM", price: "₹150" },
-      { sport: "Badminton", area: "Pritampura", date: "4 July", day: "Saturday", time: "7:00 AM – 9:00 AM", price: "₹150" },
-      { sport: "Badminton", area: "East Delhi", date: "4 July", day: "Saturday", time: "7:00 AM – 9:00 AM", price: "₹150" },
-      { sport: "Badminton", area: "Pritampura", date: "5 July", day: "Sunday", time: "7:00 PM – 9:00 PM", price: "₹150" },
-      { sport: "Badminton", area: "East Delhi", date: "5 July", day: "Sunday", time: "7:00 PM – 9:00 PM", price: "₹150" },
-      { sport: "Badminton", area: "East Delhi", date: "8 July", day: "Wednesday", time: "8:00 PM – 10:00 PM", price: "₹150" },
+      { sport: "Badminton", locationId: "east-delhi", date: "3 July", day: "Friday", time: "9:00 PM – 10:00 PM", price: "₹150" },
+      { sport: "Badminton", locationId: "pritampura", date: "4 July", day: "Saturday", time: "7:00 AM – 9:00 AM", price: "₹150" },
+      { sport: "Badminton", locationId: "east-delhi", date: "4 July", day: "Saturday", time: "7:00 AM – 9:00 AM", price: "₹150" },
+      { sport: "Badminton", locationId: "pritampura", date: "5 July", day: "Sunday", time: "7:00 PM – 9:00 PM", price: "₹150" },
+      { sport: "Badminton", locationId: "east-delhi", date: "5 July", day: "Sunday", time: "7:00 PM – 9:00 PM", price: "₹150" },
+      { sport: "Badminton", locationId: "east-delhi", date: "8 July", day: "Wednesday", time: "8:00 PM – 10:00 PM", price: "₹150" },
     ];
 
     const sportEmoji = { Badminton: "🏸", Cricket: "🏏", Football: "⚽", Volleyball: "🏐", "Table Tennis": "🏓", Tennis: "🎾" };
 
-    // Render today card from data
+    function locationLabel(locationId) {
+      const loc = LOCATIONS[locationId];
+      return loc ? loc.area : locationId;
+    }
+    function locationFullName(locationId) {
+      const loc = LOCATIONS[locationId];
+      return loc ? `${loc.name}, ${loc.area}` : locationId;
+    }
+    function locationMapsLink(locationId) {
+      const loc = LOCATIONS[locationId];
+      return loc ? loc.mapsLink : "";
+    }
+
+    // ---- Render today card from data ----
     document.getElementById('tc-sport-tag').textContent = `${sportEmoji[todaySession.sport] || '🏅'} ${todaySession.sport.toUpperCase()}`;
-    document.getElementById('tc-title').textContent = `OMG SPORTS CLUB — ${todaySession.area.toUpperCase()}`;
+    document.getElementById('tc-title').textContent = `OMG SPORTS CLUB — ${locationLabel(todaySession.locationId).toUpperCase()}`;
     document.getElementById('tc-date').textContent = `${todaySession.date} · ${todaySession.day}`;
     document.getElementById('tc-time').textContent = todaySession.time;
-    document.getElementById('tc-location').textContent = todaySession.location;
+    document.getElementById('tc-location').textContent = locationFullName(todaySession.locationId);
     document.getElementById('tc-price').textContent = todaySession.price;
-    if (todaySession.mapsLink) { document.getElementById('tc-maps').href = todaySession.mapsLink } else { document.getElementById('tc-maps').style.opacity = '0.5'; document.getElementById('tc-maps').style.pointerEvents = 'none'; }
+    const mapsLink = locationMapsLink(todaySession.locationId);
+    if (mapsLink) {
+      document.getElementById('tc-maps').href = mapsLink;
+    } else {
+      document.getElementById('tc-maps').style.opacity = '0.5';
+      document.getElementById('tc-maps').style.pointerEvents = 'none';
+    }
 
-    // Render upcoming cards
-    const grid = document.getElementById('upcoming-grid');
-    upcomingSessions.forEach(s => {
+    // ---- Group upcoming sessions by date, preserving order of first appearance ----
+    function groupByDate(sessions) {
+      const order = [];
+      const map = {};
+      sessions.forEach(s => {
+        const key = `${s.date}__${s.day}`;
+        if (!map[key]) {
+          map[key] = { date: s.date, day: s.day, items: [] };
+          order.push(key);
+        }
+        map[key].items.push(s);
+      });
+      return order.map(key => map[key]);
+    }
+
+    function sessionCard(s) {
       const card = document.createElement('div');
       card.className = 'upcoming-card';
+      const loc = LOCATIONS[s.locationId];
+      const mapsHref = loc && loc.mapsLink ? loc.mapsLink : null;
       card.innerHTML = `
-    <div class="upcoming-sport">Badminton</div>
-    <div class="upcoming-name">East Delhi</div>
+    <div class="upcoming-sport">${sportEmoji[s.sport] || ''} ${s.sport}</div>
+    <div class="upcoming-name">${locationLabel(s.locationId)}</div>
     <div class="upcoming-meta">
       <div class="upcoming-meta-row">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -1144,18 +1248,45 @@
       </div>
       <div class="upcoming-meta-row">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-        8:00 PM – 9:00 PM
+        ${s.time}
       </div>
+      ${loc ? `<div class="upcoming-meta-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        ${loc.name}
+      </div>` : ``}
     </div>
     <div style="display:flex;justify-content:space-between;align-items:flex-end">
       <div>
         <div style="font-size:12px;font-weight:600;letter-spacing:2px;color:#999;text-transform:uppercase;margin-bottom:4px">Per Player</div>
-        <div class="upcoming-price">150<span>/ player</span></div>
+        <div class="upcoming-price">${s.price.replace('₹', '')}<span>/ player</span></div>
       </div>
       <a href="https://chat.whatsapp.com/EqLcn2xRznv3rLMVpGH84R" class="btn-orange" style="padding:10px 18px;font-size:13px">Join →</a>
     </div>
   `;
-      grid.appendChild(card);
+      return card;
+    }
+
+    // ---- Render upcoming sessions grouped by date ----
+    const container = document.getElementById('upcoming-container');
+    const groups = groupByDate(upcomingSessions);
+    groups.forEach(group => {
+      const groupEl = document.createElement('div');
+      groupEl.className = 'date-group fade-up';
+
+      const heading = document.createElement('div');
+      heading.className = 'date-group-heading';
+      heading.innerHTML = `
+        <span class="date-group-title">${group.date} · ${group.day}</span>
+        ${group.items.length > 1 ? `<span class="date-group-count">${group.items.length} sessions</span>` : ``}
+      `;
+      groupEl.appendChild(heading);
+
+      const grid = document.createElement('div');
+      grid.className = `upcoming-grid count-${group.items.length}`;
+      group.items.forEach(s => grid.appendChild(sessionCard(s)));
+      groupEl.appendChild(grid);
+
+      container.appendChild(groupEl);
     });
 
     // Scroll animations
